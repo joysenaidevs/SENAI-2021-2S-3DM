@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Usuario</title>
+
+    <!-- Estlios -->
+    <link rel="stylesheet" href="/assets/css/usuario.css">
+    <link rel="stylesheet" href="/assets/css/header.css">
+    <link rel="icon" type="image/ico" href="https://www.sp.senai.br/favicon.ico">
+</head>
+<body>
+    
+    <header class="cabecalho-principal">
+        <div class="container">
+            <img src="/assets/img/senai-logo 4.png" alt="Image" height="50" width="220"> 
+            <nav class="cabecalhoPrincipal-nav">
+              <a href="#">Salas</a>
+              <a href="#">Equipamentos</a>
+              <a href="#">Usuários</a>
+              <a href="#">Sair</a>
+            </nav>
+          </div>
+    </header>
+
+    <main>
+        <section class="sec_1">
+            <div class="content">
+                <div class="titulo-cadastrarUsuario">
+                    <h1>Cadastrar Usuario</h1>
+                    <hr>
+                </div>
+
+            </div>
+
+            <form>
+                <div class="grid_1">
+                    <input type="text" name="name" placeholder="Tipo de Usuario">
+                    
+                    <input type="text" name="name" placeholder="Nome">
+
+                </div>
+
+                <div class="grid_1">                    
+                    <input type="email" name="name" id="Email" placeholder="Email">
+                    
+                    <input type="password" name="name" id="Senha" placeholder="Senha">
+                </div>
+
+                <div class="grid_1"id="botao">
+                    <button type="submit" name="button">Cadastrar</button>
+                </div>
+            </form>
+
+        </section>
+
+
+        <section class="sec_1">
+
+            <div class="content">
+                <div class="titulo-editar-usuario">
+                  <h1>Editar Usuario</h1>
+                  <hr>
+                </div>
+    
+            </div>
+            
+
+            <div class="content">
+
+                <form class="content-sala">
+                    <input type="hidden" name="form_input" value="FORM_COTACAO" />
+                    <div class="grid_1-editar-sala">                    
+                        <input type="text" name="name" placeholder="Nome" class="input watermark" />
+
+                        <input type="email" name="name" id="Email" placeholder="Email">
+
+                        <input type="password" name="name" id="senha" placeholder="Senha">
+
+                      
+                    </div>
+                  
+                    <div class="grid_1"id="botao">
+                        <button type="submit" name="button">Editar</button>
+                    </div>
+                   
+                </form>
+            </div>
+          
+
+            
+            
+        </section>
+    </main>
+    
+</body>
+</html>

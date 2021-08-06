@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Sala</title>
+
+    <!-- Estilos -->
+    <!-- <link rel="stylesheet" href="/assets/css/equipamentos.css" /> -->
+    <link rel="stylesheet" href="/assets/css/sala.css">
+    <link rel="stylesheet" href="/assets/css/header.css">
+
+   
+    <link rel="icon" type="image/ico" href="https://www.sp.senai.br/favicon.ico">
+</head>
+<body>
+
+    <header class="cabecalho-principal">
+        <div class="container">
+            <img src="/assets/img/senai-logo 4.png" alt="Image" height="50" width="220"> 
+            <nav class="cabecalhoPrincipal-nav">
+              <a href="#">Salas</a>
+              <a href="#">Equipamentos</a>
+              <a href="#">Usuários</a>
+              <a href="#">Sair</a>
+            </nav>
+          </div>
+    </header>
+    <main>
+        <section class="sec_1">
+            <div class="content">
+                <div class="titulo-cadastrarSala">
+                    <h1>Cadastrar Sala</h1>
+                    <hr>
+
+                </div>
+
+            </div>
+
+
+            <form>
+                <div class="grid_1" >
+                    <input type="text" name="name" placeholder="Nome" class="input watermark" />
+                </div> 
+
+                <input type="hidden" name="form_input" value="FORM_COTACAO" />
+
+                <div class="grid_1">                    
+                    <input type="number" name="name" placeholder="Andar" class="input watermark" />
+                
+                
+                    <input type="number" name="empresa" placeholder="Metragem" class="input watermark" />
+                </div>
+
+                <div class="grid_1"id="botao">
+                    <button type="submit" name="button">Cadastrar</button>
+                </div>
+
+            </form>
+           
+        </section>
+        
+        <section class="sec_1">
+
+            <div class="content">
+                <div class="titulo-cadastrar-Sala">
+                  <h1>Editar Salas</h1>
+                  <hr>
+                </div>
+    
+            </div>
+            
+
+            <div class="content">
+
+                <form class="content-sala">
+                    <input type="hidden" name="form_input" value="FORM_COTACAO" />
+                    <div class="grid_1-editar-sala">                    
+                        <input type="number" name="name" placeholder="Sala" class="input watermark" />
+
+                        <input type="text" name="name" placeholder="Nome" class="input watermark" />
+
+
+                        <input type="text" name="name" placeholder="Metragem" class="inpurt watermark">
+                    </div>
+                  
+                    <div class="grid_1"id="botao">
+                        <button type="submit" name="button">Editar</button>
+                    </div>
+                   
+                </form>
+            </div>
+          
+
+            
+            
+        </section>
+        
+    </main>
+
+    
+</body>
+</html>

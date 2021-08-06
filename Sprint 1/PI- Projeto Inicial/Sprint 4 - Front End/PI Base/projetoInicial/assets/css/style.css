@@ -1,0 +1,12 @@
+:root{
+    --background: #1E1C21;
+    --pink: #FC1E8B;
+    --purple: #7278C3;
+    --blue: #264E73;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
