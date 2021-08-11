@@ -6,17 +6,14 @@ using ProjetoInicial.webApi.Domains;
 
 namespace ProjetoInicial.webApi.Interfaces
 {
-    interface ISala
+    interface ITiposUsuario
     {
-        List<Sala> ListarTodos(int id);
+       List<TiposUsuario> ListarTodos();
 
-        List<Sala> Listar();
+        void Cadastrar(TiposUsuario novoTipo);
 
-        void Cadastrar(Sala novaSala);
-
-        void Atualizar(int id, Sala salaAtualizada);
+        void Atualizar(int id, TiposUsuario tiposUsuarioAtualizado);
 
         void Deletar(int id);
-
     }
 }

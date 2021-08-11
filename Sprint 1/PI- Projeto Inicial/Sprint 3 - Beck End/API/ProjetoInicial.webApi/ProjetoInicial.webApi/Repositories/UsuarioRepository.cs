@@ -15,8 +15,9 @@ namespace ProjetoInicial.webApi.Repositories
         public void Atualizar(int id, Usuario novoUsuario)
         {
             Usuario usuarioBuscado = ctx.Usuarios.Find(id);
-            if(usuarioBuscado.Email != null || usuarioBuscado.Senha != null)
+            if(usuarioBuscado != null)
             {
+                usuarioBuscado.Nome = novoUsuario.Nome;
                 usuarioBuscado.Email = novoUsuario.Email;
                 usuarioBuscado.Senha = novoUsuario.Senha;
             }
@@ -45,7 +46,7 @@ namespace ProjetoInicial.webApi.Repositories
 
         public List<Usuario> ListarTodos()
         {
-            return ctx.Usuarios.Select(u => new Usuario
+            /* return ctx.Usuarios.Select(u => new Usuario
             {
                 IdUsuario = u.IdUsuario,
                 Nome  = u.Nome,
@@ -55,7 +56,9 @@ namespace ProjetoInicial.webApi.Repositories
                     IdTiposUsuario = u.IdTiposUsuarioNavigation.IdTiposUsuario,
                     Nome = u.IdTiposUsuarioNavigation.Nome
                 }
-            }).ToList();
+            }).ToList(); */
+
+            return ctx.Usuarios.ToList();
         }
 
         public Usuario Login(string email, string senha)

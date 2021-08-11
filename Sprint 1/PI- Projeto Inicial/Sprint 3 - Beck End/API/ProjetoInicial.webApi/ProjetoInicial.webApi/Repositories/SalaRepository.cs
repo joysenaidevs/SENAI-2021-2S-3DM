@@ -16,7 +16,7 @@ namespace ProjetoInicial.webApi.Repositories
         {
             Sala salaBuscada = ctx.Salas.Find(id);
 
-            if(salaBuscada.Andar != 0 && salaBuscada.Metragem != 0 && salaBuscada.Nome != "")
+            if(salaBuscada != null)
             {
                 salaBuscada.Andar = salaAtualizada.Andar;
                 salaBuscada.Metragem = salaAtualizada.Metragem;
@@ -47,9 +47,19 @@ namespace ProjetoInicial.webApi.Repositories
             }
         }
 
-        public List<Sala> ListarTodos()
+        public List<Sala> Listar()
         {
             return ctx.Salas.ToList();
+        }
+
+        public List<Sala> ListarTodos(int id)
+        {
+
+            Sala sala = ctx.Salas.FirstOrDefault(sala => sala.IdUsuario == id);
+
+            return ctx.Salas
+                 .Where(c => c.IdUsuario == sala.IdUsuario)
+                 .ToList();
         }
     }
 }

@@ -1,12 +1,15 @@
-import {useState, useEffect} from 'react'
+import {useState} from 'react'
 import axios from 'axios'
 import { parseJwt } from '../../services/auth'
-import { Redirect } from 'react-router'
+import { useHistory } from 'react-router'
+import Header from '../../Components/header/header'
+import './login.css'
+import Helmet  from 'react-helmet'
 
 function Login(){
     const [email, setEmail] = useState('')
     const [senha, setSenha] = useState('') 
-
+    const history = useHistory()
     function efetuaLogin(event){
         event.preventDefault()
         axios.post('http://localhost:5000/api/login', {
@@ -20,16 +23,14 @@ function Login(){
                 console.log('Token : '+ resposta.data.token)
                 console.log(parseJwt())
 
-                switch(parseJwt().role)
-                {
-                    case '1':
-                        window.location.replace("http://localhost:3000/cadastrousuarios")
-                    break;
-
-                    case '2':
-                        window.location.replace("/cadastroequipamento")
-                    break;    
+                if(parseJwt().role === "1"){
+                    history.push('/cadastrarusuario')
+                } else if(parseJwt().role === "2"){
+                    history.push('/cadastrarequipamento')
                 }
+
+                
+               
             }
         })
         .catch(erro => {
@@ -39,8 +40,11 @@ function Login(){
     }
 
         return(
-            <div>
-                <form onSubmit={efetuaLogin}>
+            <div className="bodyLgn">
+                <Helmet>
+                    <title>SM - Login</title>
+                </Helmet>
+                {/* <form onSubmit={efetuaLogin}>
                     <h2>Login:</h2>
                     <input
                         placeholder="email"
@@ -61,7 +65,43 @@ function Login(){
                     >
                         Login
                     </button>
-                </form>
+                </form> */}
+                <main>
+                    <section class="login">
+                        <h1>LOGIN</h1>
+                        <form onSubmit={efetuaLogin} class="form">
+                            <div class="item">
+                                <input
+                                    class="inputLogin"
+                                    placeholder="Email"
+                                    type="email"
+                                    name="username"
+                                    id="loginEmail"
+                                    value={email}
+                                    onChange={(event) => {setEmail(event.target.value)}}
+                                />
+                            </div>
+
+                            <div class="item">
+                                <input
+                                    class="inputLogin"
+                                    placeholder="Senha"
+                                    type="password"
+                                    name="password"
+                                    id="loginPassword"
+                                    value={senha}
+                                    onChange={(event) => {setSenha(event.target.value)}}
+                                />
+                            </div>
+
+                            <div class="item">
+                                <button class="btn_login" id="btnLogin" type="submit">
+                                    Login
+                                </button>
+                            </div>
+                        </form>
+                    </section>
+                </main>
             </div>
         )
     

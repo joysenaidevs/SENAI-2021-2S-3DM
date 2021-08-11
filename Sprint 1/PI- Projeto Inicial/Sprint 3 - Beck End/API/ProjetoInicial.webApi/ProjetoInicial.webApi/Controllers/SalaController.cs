@@ -8,6 +8,7 @@ using ProjetoInicial.webApi.Interfaces;
 using ProjetoInicial.webApi.Domains;
 using ProjetoInicial.webApi.Repositories;
 using Microsoft.AspNetCore.Authorization;
+using System.IdentityModel.Tokens.Jwt;
 
 namespace ProjetoInicial.webApi.Controllers
 {
@@ -33,11 +34,27 @@ namespace ProjetoInicial.webApi.Controllers
         {
             try
             {
-                return Ok(_salaRepository.ListarTodos());
+                int id = Convert.ToInt32(HttpContext.User.Claims.First(c => c.Type == JwtRegisteredClaimNames.Jti).Value);
+
+                return Ok(_salaRepository.ListarTodos(id));
             }
             catch (Exception e)
             {
                 return BadRequest(e);
+            }
+        }
+
+        [Authorize]
+        [HttpGet("listar")]
+        public IActionResult GetList()
+        {
+            try
+            {
+                return Ok(_salaRepository.Listar());
+
+            } catch (Exception er)
+            {
+                return BadRequest(er);
             }
         }
 
@@ -67,9 +84,9 @@ namespace ProjetoInicial.webApi.Controllers
         /// <param name="id">Id da sala que será atualizada</param>
         /// <param name="salaAtualizada">Credenciais atualizadas da sala</param>
         /// <returns>Retorna um StatusCode NoContent</returns>
-        [HttpPatch("{id}")]
+        [HttpPut("{id}")]
         [Authorize(Roles = "1")]
-        public IActionResult Patch(int id, Sala salaAtualizada)
+        public IActionResult Put(int id, Sala salaAtualizada)
         {
             try
             {
@@ -88,7 +105,7 @@ namespace ProjetoInicial.webApi.Controllers
         /// <param name="id">Id da sala que será deletada</param>
         /// <returns>Retorna um StatusCode NoContent</returns>
         [HttpDelete("{id}")]
-        [Authorize(Roles = "1")]
+        [Authorize]
         public IActionResult Delete(int id)
         {
             try

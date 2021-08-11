@@ -70,8 +70,8 @@ namespace ProjetoInicial.webApi.Controllers
         /// <param name="usuarioAtualizado"></param>
         /// <returns></returns>
         [Authorize(Roles = "1")]
-        [HttpPatch("{id}")]
-        public IActionResult Patch(int id, Usuario usuarioAtualizado)
+        [HttpPut("{id}")]
+        public IActionResult Put(int id, Usuario usuarioAtualizado)
         {
             try
             {

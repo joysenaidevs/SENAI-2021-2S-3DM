@@ -24,6 +24,7 @@ namespace ProjetoInicial.webApi.Repositories
                 equipamentoBuscado.NumeroSerie = equipamentoAtualizado.NumeroSerie;
                 equipamentoBuscado.NumeroPatrimonio = equipamentoAtualizado.NumeroPatrimonio;
                 equipamentoBuscado.Disponivel = equipamentoAtualizado.Disponivel;
+                equipamentoBuscado.Descricao = equipamentoAtualizado.Descricao;
             }
 
             ctx.Equipamentos.Update(equipamentoBuscado);
@@ -48,6 +49,11 @@ namespace ProjetoInicial.webApi.Repositories
                 ctx.SaveChanges();
             }
             
+        }
+
+        public Equipamento BuscarPorId(int id)
+        {
+            return ctx.Equipamentos.FirstOrDefault(equipamento => equipamento.IdEquipamento == id);
         }
 
         public List<Equipamento> ListarTodos()

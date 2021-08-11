@@ -15,5 +15,7 @@ namespace ProjetoInicial.webApi.Interfaces
         void Atualizar(int id, Equipamento equipamentoAtualizado);
 
         void Deletar(int id);
+
+        Equipamento BuscarPorId(int id);
     }
 }

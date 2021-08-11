@@ -68,8 +68,8 @@ namespace ProjetoInicial.webApi.Controllers
         /// <param name="equipamentoAtualizado">Credenciais atualizadas desse equipamento</param>
         /// <returns>Retorna um StatusCode NoContent</returns>
         [Authorize(Roles = "1")]
-        [HttpPatch("{id}")]
-        public IActionResult Patch(int id, Equipamento equipamentoAtualizado)
+        [HttpPut("{id}")]
+        public IActionResult Put(int id, Equipamento equipamentoAtualizado)
         {
             try
             {
@@ -79,6 +79,20 @@ namespace ProjetoInicial.webApi.Controllers
             catch (Exception e)
             {
                 return BadRequest(e);
+            }
+        }
+
+        [HttpGet("{id}")]
+        public IActionResult GetById(int id)
+        {
+            try
+            {
+                _equipamentoRepository.BuscarPorId(id);
+
+                return StatusCode(200);
+            }catch(Exception er)
+            {
+                return BadRequest(er);
             }
         }
 

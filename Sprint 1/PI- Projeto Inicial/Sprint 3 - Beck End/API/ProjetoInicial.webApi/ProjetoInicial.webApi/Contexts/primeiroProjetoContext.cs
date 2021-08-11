@@ -92,8 +92,8 @@ namespace ProjetoInicial.webApi.Contexts
 
                 entity.ToTable("salas");
 
-                entity.HasIndex(e => e.Andar, "UQ__salas__BEDE56E1916946A4")
-                    .IsUnique();
+                entity.HasIndex(e => e.Andar, "UQ__salas__BEDE56E1916946A4");
+                   
 
                 entity.Property(e => e.IdSala).HasColumnName("idSala");
 

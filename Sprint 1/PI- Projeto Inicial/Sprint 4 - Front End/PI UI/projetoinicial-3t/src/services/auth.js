@@ -3,3 +3,5 @@ export const parseJwt = () => {
 
     return JSON.parse(window.atob(base64))
 }
+
+export const usuarioAutenticado = () => localStorage.getItem('usuario-login') !== null;

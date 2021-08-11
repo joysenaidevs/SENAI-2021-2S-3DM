@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+body{
+    width: 100%;
+    background-color:#fff;
+}
+
+body h1{
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    color: #6e0e10;
+}
+
+body hr{
+    width: 75%;
+    margin: auto;
+    border: 0.5px solid #d71111;
+    margin-bottom: 3rem;
+}
+
+.content{
+    width: 80%;
+    margin: auto;
+}
+
+.sec_1{
+    width: 100%;
+    height: 100%;
+    margin-top: 4rem;
+    /* background-color: rgba(127, 255, 212, 0.377); */
+}
+
+.titulo-cadastrarEquipamento h1{
+    margin-bottom: 10px;
+    font-family: 'Bebas Neue', cursive;
+    
+    font-size: 3.5rem;
+}
+
+.grid_1{
+    width: 100%;
+    height: 7rem;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grid_1 input{
+    width: 45%;
+    height: 2rem;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+    border: none;
+    border-bottom: solid 1px #6E0E10;
+    background-color: transparent;
+}
+
+.grid_1 label{
+    padding-bottom: 40px;
+
+}
+
+.grid_1 select{
+    width: 45%;
+    height: 2rem;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+    border: none;
+    border-bottom: solid 1px #6E0E10;
+    background-color: transparent;
+    color: rgb(110, 109, 109);
+    -webkit-appearance: none;
+    background-image: url('../../assets/img/Polygon3.png');
+    -moz-appearance: none;
+    background-repeat: no-repeat;
+    background-position: 650px center;
+    padding-left: 10px;
+}
+
+.grid_1 select img{
+    width: 10%;
+    
+}
+
+.title-descricao{
+    font-size: 1.1rem;
+    color: rgb(110,109,109);
+    margin-bottom: 10px;
+    
+}
+
+.descricao{
+    width: 100%;
+    height: 5rem;
+    border: solid 1px #6E0E10;
+    padding: 0.5rem;
+}
+
+.form h2{
+    text-align: center;
+    font-weight: 500;
+    margin-top: 3rem;
+}
+.coluna{
+    width: 16%;
+    height: 2rem;
+    margin: auto;    
+    display: flex;
+    justify-content: space-between;
+}
+
+.coluna2{
+    width: 30%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.grid_1 button{
+    width: 15%;
+    height: 3rem;
+    margin: auto;
+    background-color: #264E73;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 5rem;
+    cursor: pointer;
+}
+
+.Tabela{
+    width: 98%;
+    height: 100%;
+    text-align: center;
+    margin: 4rem 0.5rem;
+}
+
+.Tabela table{
+    width: 100%;
+    height: 100%;
+}
+
+.Tabela > table > thead > td{
+    background-color: #b8191c;
+    color: rgb(255, 255, 255);
+    font-family: 'Bebas Neue', cursive;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    padding: 10px;
+    width: 100px;
+}
+
+.Tabela > table > tbody > tr > td{
+    background-color: #dfdfdf;
+    color: black;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 16px;
+    border-right: 0.5px solid rgb(173, 173, 173);
+    
+    letter-spacing: 1px;
+}
+
+.td-h{
+    color: #761C1E;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.btnt-ex{
+    background-color: #d71111;
+    border: 0;
+    width: 100%;
+    color: white;
+    height: 30%;
+    margin-top: 0.5vh;
+    border-radius: 10px 20px 30px
+}
+
+.btnt-ex:hover{
+    background-color: white;
+    color: #d71111;
+    cursor: pointer;
+    border: 1px solid #d71111;
+}
+
+.btnt-ex:disabled{
+    color: #A7A7A7;
+    background-color: grey;
+    border: 0;
+    cursor: not-allowed;
+}
+
+.clean{
+    background-color: #264E73;
+    border: 0;
+    width: 100%;
+    color: white;
+    height: 50%;
+    margin-top: 0.5vh;
+}
+
+.clean:disabled{
+    color: #A7A7A7;
+    background-color: grey;
+    border: 0;
+    cursor: not-allowed;
+}
+
+.clean:hover{
+    background-color: white;
+    color: #d71111;
+    cursor: pointer;
+    border: 1px solid #d71111;
+}
+
+.btn-cadastro{
+    background-color: #264E73;
+    border: 0;
+    width: 100%;
+    color: white;
+    height: 50%;
+    margin-top: 0.5vh;
+}
+
+.btn-cadastro:disabled{
+    color: #A7A7A7;
+    background-color: grey;
+    border: 0;
+    cursor: not-allowed;
+}
+
+.btn-cadastro:hover{
+    background-color: white;
+    color: #d71111;
+    cursor: pointer;
+    border: 1px solid #d71111;
+}
+
+.btnt-ed{
+    background-color: #d71111;
+    border: 0;
+    width: 100%;
+    color: white;
+    height: 30%;
+    margin-top: 1.5vh;
+    border-radius: 10px 20px 30px 
+}
+
+.btnt-ed:hover{
+    background-color: white;
+    color: #d71111;
+    cursor: pointer;
+    border: 1px solid #d71111;
+}
+
+.listagem{
+    display: flex;
+    flex-direction: column;
+
+}

@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+*{
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.bodyLgn{
+    padding-top: 5vh;
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to bottom, #264E73, rgb(105, 6, 11));
+    color: #fff;
+}
+
+.login{
+    width:  38%;
+    height: 70%;
+    margin: auto;
+    margin-top: 10%;
+    border: solid 5px rgb(172, 172, 172);
+    padding: 50px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.login h1{
+    font-size: 42px;
+    font-weight: 300;
+    text-align: center;
+    color: black;
+}
+
+.form{
+    margin-top: 30px;
+}
+
+
+.item input{
+    width: 75%;
+    height: 5%;
+    margin-bottom: 50px;
+    font-size: 20px;
+    border: none;
+    border-bottom: solid 1px rgb(0, 0, 0);
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+}
+
+.item ::placeholder{
+    color: rgb(95, 95, 95);
+}
+
+.btn_login{
+    width: 50%;
+    height: 3.3vw;
+    margin-top: 40px;
+    background: #FF2020;
+    border: none;
+    color: #fff;
+    font-size: 1.75rem;
+    cursor: pointer;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
